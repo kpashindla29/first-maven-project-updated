@@ -18,18 +18,14 @@ public class StudentDAOImpl implements StudentDAO {
 	
 	private ResultSet rs;
 	
-	
-	
 	public StudentDAOImpl() {
-		
+	
 		try {
 			
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			
-			
 			this.con = DriverManager.getConnection("jdbc:mysql://localhost/test","root",""); 
-			
-			
+		
 		}
 		catch(ClassNotFoundException e) {
 			
@@ -44,8 +40,6 @@ public class StudentDAOImpl implements StudentDAO {
 		
 	}
 	
-	
-
 	@Override
 	public int register(Student s) {
 		
